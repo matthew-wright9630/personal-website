@@ -3,7 +3,12 @@ import "./App.css";
 function App() {
   return (
     <div className="app">
-      <h1 className="app__header">Hello! My name is Matthew Wright.</h1>
+      <div className="app__header">
+        <h1 className="app__header__title">
+          Hello! My name is Matthew Wright.
+        </h1>
+        <div className="app__headshot"></div>
+      </div>
       <p className="app__description">
         I am a software engineer passionate about building robust, user-friendly
         websites. I specialize in responsive web design, front-end development
@@ -13,7 +18,7 @@ function App() {
         I enjoy turning ideas into functional web applications and am always
         learning new and better ways to craft web pages.
       </p>
-      <h2 className="app__header">Projects:</h2>
+      <h2 className="app__project__title">Projects:</h2>
       <ul className="app__projects">
         <li className="app__project">
           <p className="app__project-title">Forest Fire Project:</p>
@@ -51,7 +56,7 @@ function App() {
               </li>
             </ul>
             <div className="app__links">
-              <p>
+              <p className="app__link-paragraph">
                 <a
                   className="app__project-description app__link"
                   href="https://matthew-wright9630.github.io/forest-fire-game/"
@@ -59,7 +64,7 @@ function App() {
                   Live Website
                 </a>
               </p>
-              <p>
+              <p className="app__link-paragraph">
                 <a
                   className="app__project-description app__link"
                   href="https://github.com/matthew-wright9630/forest-fire-game"
@@ -96,31 +101,35 @@ function App() {
               <p className="app__feature-title">
                 <b>Features:</b>
               </p>
-              <li className="app__feature">
-                Mobile Resopnsive Web Design
-              </li>
-              <li className="app__feature">
-                User Authentication
-              </li>
+              <li className="app__feature">Mobile Resopnsive Web Design</li>
+              <li className="app__feature">User Authentication</li>
               <li className="app__feature">
                 Drag-and-drop and Touch-and-drop functionality
               </li>
             </ul>
             <div className="app__links">
-              <p>
+              <p className="app__link-paragraph">
                 <a
                   className="app__project-description app__link"
-                  href="https://matthew-wright9630.github.io/forest-fire-game/"
+                  href="https://mwcardgames.csproject.org/"
                 >
                   Live Website
                 </a>
               </p>
-              <p>
+              <p className="app__link-paragraph">
                 <a
                   className="app__project-description app__link"
-                  href="https://github.com/matthew-wright9630/forest-fire-game"
+                  href="https://github.com/matthew-wright9630/Card-Games-Frontend"
                 >
-                  GitHub
+                  GitHub - Frontend
+                </a>
+              </p>
+              <p className="app__link-paragraph">
+                <a
+                  className="app__project-description app__link"
+                  href="https://github.com/matthew-wright9630/Card-Games-Backend"
+                >
+                  GitHub - Backend
                 </a>
               </p>
             </div>
@@ -130,50 +139,42 @@ function App() {
           <p className="app__project-title">Around the US Project:</p>
           <div className="app__project-group">
             <p className="app__project-description app__paragraph">
-              <b>Summary: </b>A browser-based interactive game that simulates
-              how a wildfire may spread
+              <b>Summary: </b> A mock social media site that allows users to add
+              and share photos.
             </p>
             <p className="app__project-description app__tech-stack">
               <b>Tech Stack: </b> HTML, CSS, JavaScript, React.js
             </p>
             <p className="app__project-description app__purpose">
-              <b>Project Description: </b>Inspired by curricula from University
-              of Alaska Outreach GI, this project virtualizes the board game.
-              This allows for quicker and easier set-up, particularly for
-              younger students.
+              <b>Project Description: </b> The website simulates a social media
+              website, such as Instagram, that allows a user to add photos. The
+              user can share their profile with other users so they can view and
+              like their photos.
             </p>
             <p className="app__project-description app__role">
-              <b>My Role: </b>Built entire application logic, designed
-              interactive interface, and optimized performance for smooth
-              rendering.
+              <b>My Role: </b>Built application from Figma design, Built
+              application logic.
             </p>
             <ul className="app__project-description app__features">
               <p className="app__feature-title">
                 <b>Features:</b>
               </p>
-              <li className="app__feature">
-                Dynamic grid-based simulation of wildfire spread
-              </li>
-              <li className="app__feature">
-                Adjustable conditions for various simulations
-              </li>
-              <li className="app__feature">
-                Responsive UI for computer and tablet screen sizes
-              </li>
+              <li className="app__feature">Responsive web design</li>
+              <li className="app__feature">Adding and deleting cards.</li>
             </ul>
             <div className="app__links">
-              <p>
+              <p className="app__link-paragraph">
                 <a
                   className="app__project-description app__link"
-                  href="https://matthew-wright9630.github.io/forest-fire-game/"
+                  href="https://matthew-wright9630.github.io/se_project_aroundtheus_MW/"
                 >
                   Live Website
                 </a>
               </p>
-              <p>
+              <p className="app__link-paragraph">
                 <a
                   className="app__project-description app__link"
-                  href="https://github.com/matthew-wright9630/forest-fire-game"
+                  href="https://github.com/matthew-wright9630/se_project_aroundtheus_MW/tree/main?tab=readme-ov-file"
                 >
                   GitHub
                 </a>
@@ -182,8 +183,27 @@ function App() {
           </div>
         </li>
       </ul>
+      <div className="app__contact-me">
+        <p>
+          Feel free to contact me via{" "}
+          <a className="app__link" href="mailto:matthew.wright9630@gmail.com">
+            Email
+          </a>
+          , and connect with me on{" "}
+          <a
+            className="app__link"
+            href="https://www.linkedin.com/in/matthew-wright-a76142149/"
+          >
+            LinkedIn
+          </a>
+          !
+        </p>
+      </div>
       <p className="app__footer">
-        <a href="https://www.freepik.com/free-vector/gradient-cyber-futuristic-background_18954497.htm">
+        <a
+          className="app__link"
+          href="https://www.freepik.com/free-vector/gradient-cyber-futuristic-background_18954497.htm"
+        >
           Image by freepik
         </a>
       </p>
