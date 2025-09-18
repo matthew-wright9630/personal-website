@@ -87,7 +87,7 @@ function App() {
               express.js, mongoDB, NoSQL
             </p>
             <p className="app__project-description app__purpose">
-              This project was created as a final project. Seamless
+              <b>Project Description: </b>This project was created as a final project. Seamless
               drag-and-drop allows users to use either a mouse or touch to play.
               Responsive web design has been implemented to work for most screen
               sizes.
