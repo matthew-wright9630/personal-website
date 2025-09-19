@@ -41,7 +41,7 @@
 }
 
 .app__description {
-  background-color: rgba(0, 0, 0, 0.5);
+  background-color: rgba(0, 0, 0, 0.7);
 }
 
 .app__description__paragraph {
@@ -69,7 +69,7 @@
 .app__project {
   display: flex;
   border: 1px limegreen, solid;
-  background-color: rgba(0, 0, 0, 0.5);
+  background-color: rgba(0, 0, 0, 0.7);
 }
 
 .app__project-title {
