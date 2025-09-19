@@ -9,15 +9,18 @@ function App() {
         </h1>
         <div className="app__headshot"></div>
       </div>
-      <p className="app__description">
-        I am a software engineer passionate about building robust, user-friendly
-        websites. I specialize in responsive web design, front-end development
-        with React, and creating seamless user experiences.
-      </p>
-      <p className="app__description">
-        I enjoy turning ideas into functional web applications and am always
-        learning new and better ways to craft web pages.
-      </p>
+      <div className="app__description">
+        <p className="app__description__paragraph">
+          I am a software engineer passionate about building robust,
+          user-friendly websites. I specialize in responsive web design,
+          front-end development with React, and creating seamless user
+          experiences.
+        </p>
+        <p className="app__description__paragraph">
+          I enjoy turning ideas into functional web applications and am always
+          learning new and better ways to craft web pages.
+        </p>
+      </div>
       <h2 className="app__project__title">Projects:</h2>
       <ul className="app__projects">
         <li className="app__project">
@@ -87,10 +90,10 @@ function App() {
               express.js, mongoDB, NoSQL
             </p>
             <p className="app__project-description app__purpose">
-              <b>Project Description: </b>This project was created as a final project. Seamless
-              drag-and-drop allows users to use either a mouse or touch to play.
-              Responsive web design has been implemented to work for most screen
-              sizes.
+              <b>Project Description: </b>This project was created as a final
+              project. Seamless drag-and-drop allows users to use either a mouse
+              or touch to play. Responsive web design has been implemented to
+              work for most screen sizes.
             </p>
             <p className="app__project-description app__role">
               <b>My Role: </b>Built entire application logic, integrated REST
@@ -184,7 +187,7 @@ function App() {
         </li>
       </ul>
       <div className="app__contact-me">
-        <p>
+        <p className="app__description">
           Feel free to contact me via{" "}
           <a className="app__link" href="mailto:matthew.wright9630@gmail.com">
             Email

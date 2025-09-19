@@ -32,7 +32,7 @@
   height: 180px;
   background: url("./assets/Matthew-Headshot4.jpg");
   /* transform: rotate(90deg); */
-  background-size:  contain;
+  background-size: contain;
   background-repeat: no-repeat;
   background-position: center;
   background-color: transparent;
@@ -41,6 +41,10 @@
 }
 
 .app__description {
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.app__description__paragraph {
   margin: 10px auto;
   font-size: 20px;
   text-align: center;
@@ -64,7 +68,8 @@
 
 .app__project {
   display: flex;
-  border: 1px red, solid;
+  border: 1px limegreen, solid;
+  background-color: rgba(0, 0, 0, 0.5);
 }
 
 .app__project-title {
@@ -74,8 +79,8 @@
 }
 
 .app__project-group {
-  border-left: red 1px solid;
-  width: 80%
+  border-left: limegreen 1px solid;
+  width: 80%;
   /* flex-grow: 2; */
 }
 
@@ -130,7 +135,7 @@
 
   .app__project-title {
     font-size: 16px;
-    width: 20vw
+    width: 20vw;
   }
 
   .app__project-description {
