@@ -90,10 +90,10 @@ function App() {
               express.js, mongoDB, NoSQL
             </p>
             <p className="app__project-description app__purpose">
-              <b>Project Description: </b>This project was created as a final
-              project. Seamless drag-and-drop allows users to use either a mouse
-              or touch to play. Responsive web design has been implemented to
-              work for most screen sizes.
+              <b>Project Description: </b>This website allows a user to play
+              solitaire. Seamless drag-and-drop allows users to use either a
+              mouse or touch to play. Responsive web design has been implemented
+              to work for most screen sizes.
             </p>
             <p className="app__project-description app__role">
               <b>My Role: </b>Built entire application logic, integrated REST
