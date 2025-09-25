@@ -42,6 +42,7 @@
 
 .app__description {
   background-color: rgba(0, 0, 0, 0.7);
+  margin: 0;
 }
 
 .app__description__paragraph {
@@ -68,14 +69,35 @@
 
 .app__project {
   display: flex;
+  flex-direction: column;
+
   border: 1px limegreen, solid;
+}
+
+.app__project-content {
+  display: flex;
+  border: 1px limegreen solid;
   background-color: rgba(0, 0, 0, 0.7);
+  border-bottom: none;
+}
+
+.app__project-header {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  width: 20%;
+  border-bottom: 1px limegreen solid;
 }
 
 .app__project-title {
-  margin: auto 0;
+  /* margin: auto 0; */
   font-size: 28px;
-  width: 20%;
+  width: 100%;
+  text-align: center;
+}
+
+.app__project-btn {
+  visibility: hidden;
 }
 
 .app__project-group {
@@ -112,10 +134,101 @@
 
 .app__link {
   color: #61dafb;
+  transition: 0.3s linear;
+}
+
+.app__link:hover {
+  opacity: 0.5;
+}
+
+.app__slideshow-container {
+  /* position: relative; */
+}
+
+.app__swiper {
+  width: 80%;
+  max-width: 850px;
+  margin: 20px auto;
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+.app__swiper__img {
+  width: 100%;
+  height: auto;
+  display: block;
+  cursor: pointer;
+  transition: 0.3s linear;
+}
+
+.app__swiper__img:hover {
+  opacity: 0.7;
+}
+
+.app__image-modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.4s ease-in-out;
+  z-index: 1000;
+}
+
+.app__image-modal_open {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.app__image-popup {
+  max-width: 90%;
+  max-height: 90%;
+  border-radius: 12px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.5);
+  transform: scale(0.8);
+  transition: transform 0.4s ease-in-out;
+}
+
+.app__image-modal_open .app__image-popup {
+  transform: scale(1);
+}
+
+.modal__close-button {
+  padding: 0;
+  margin: 0;
+  position: absolute;
+  top: 20px;
+  right: 28px;
+  width: 20px;
+  height: 20px;
+  background-image: url("./assets/Cross.svg");
+  background-position: center;
+  background-size: contain;
+  border: none;
+  cursor: pointer;
+  transition: 0.3s linear;
+}
+
+.modal__close-button:hover {
+  opacity: 0.5;
+}
+
+.app__image-popup {
+  position: absolute;
+  top: 5%;
+  left: 5%;
+  width: 90vw;
+  height: 90vh;
 }
 
 .app__contact-me {
-  font-size: 24px;
+  background-color: rgba(0, 0, 0, 0.7);
 }
 
 @media screen and (max-width: 936px) {
@@ -135,7 +248,7 @@
 
   .app__project-title {
     font-size: 16px;
-    width: 20vw;
+    /* width: 20vw; */
   }
 
   .app__project-description {
@@ -161,6 +274,18 @@
 
   .app__link-paragraph {
     margin: 0;
+  }
+
+  .app__swiper {
+    width: 95%;
+  }
+
+  .app__image-popup {
+    position: absolute;
+    top: 20%;
+    left: 5%;
+    width: 90vw;
+    height: 60vh;
   }
 
   .app__contact-me {
