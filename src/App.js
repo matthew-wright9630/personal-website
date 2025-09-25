@@ -25,7 +25,9 @@ import "./App.css";
 import { useState } from "react";
 
 function App() {
+  
   let swiperInstance = null;
+  console.log(swiperInstance);
 
   const [selectedImage, setSelectedImage] = useState(null);
 
