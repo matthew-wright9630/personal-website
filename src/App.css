@@ -51,7 +51,7 @@
   text-align: center;
 }
 
-.app__project__title {
+.app__project__header {
   width: 100%;
   font-size: 35px;
   display: flex;
@@ -78,10 +78,9 @@
   display: flex;
   border: 1px limegreen solid;
   background-color: rgba(0, 0, 0, 0.7);
-  border-bottom: none;
 }
 
-.app__project-header {
+.app__project-div {
   display: flex;
   flex-direction: column;
   justify-content: space-around;
@@ -256,15 +255,33 @@
   }
 }
 
-@media screen and (max-width: 520px) {
-  .app__header {
+@media screen and (max-width: 600px) {
+  .app__project-content {
     flex-direction: column;
-    height: 100%;
+    align-items: center;
   }
 
   .app__header__title {
     width: 100%;
     text-align: center;
+  }
+
+    .app__project-div {
+    width: 100%;
+  }
+
+  .app__project-title {
+    font-size: 24px;
+  }
+
+  .app__project-group {
+    border-left: none;
+    width: 100%;
+    text-align: center;
+  }
+
+  .app__feature {
+    padding: 0;
   }
 
   .app__links {

@@ -8,6 +8,13 @@ import { Navigation, Pagination, Autoplay } from "swiper/modules";
 import wildfireHomepage from "./assets/Wildfire-Homescreen.png";
 import wildfireStartImage from "./assets/Wildfire-Gameboard-Start.png";
 import wildfireEndImage from "./assets/Wildfire-Gameboard-End.png";
+import wildfireMobileHomepage1 from "./assets/Wildfire-Homescreen-Mobile-1.png";
+import wildfireMobileHomepage2 from "./assets/Wildfire-Homescreen-Mobile-2.png";
+import wildfireMobileGameEnd from "./assets/Wildfire-Game-End-Mobile.png";
+import wildfireMobileGameStart from "./assets/Wildfire-Game-Start-Mobile.png";
+import wildfireMobileGameboard from "./assets/Wildfire-Gameboard-Mobile.png";
+import wildfireMobileStartScreen from "./assets/Wildfire-Start-Screen-Mobile.png";
+import wildfireMobileUpdateModal from "./assets/Wildfire-Update-Model-Mobile.png";
 import cardGameHomepage from "./assets/Card-Game-Homepage.png";
 import cardGameModal from "./assets/Card-Game-Modal.png";
 import cardGameSolitaire from "./assets/Solitaire-Game.png";
@@ -25,7 +32,6 @@ import "./App.css";
 import { useState } from "react";
 
 function App() {
-  
   let swiperInstance = null;
   console.log(swiperInstance);
 
@@ -35,6 +41,18 @@ function App() {
     wildfireHomepage,
     wildfireStartImage,
     wildfireEndImage,
+    wildfireMobileHomepage1,
+    wildfireMobileHomepage2,
+  ];
+
+  const wildfireMobileImages = [
+    wildfireMobileHomepage1,
+    wildfireMobileHomepage2,
+    wildfireMobileStartScreen,
+    wildfireMobileUpdateModal,
+    wildfireMobileGameboard,
+    wildfireMobileGameStart,
+    wildfireMobileGameEnd,
   ];
 
   const cardGameImages = [
@@ -79,11 +97,11 @@ function App() {
           learning new and better ways to craft web pages.
         </p>
       </div>
-      <h2 className="app__project__title">Projects:</h2>
+      <h2 className="app__project__header">Projects:</h2>
       <ul className="app__projects">
         <li className="app__project">
           <div className="app__project-content">
-            <div className="app__project-header">
+            <div className="app__project-div">
               <p className="app__project-title">
                 <b>Forest Fire Project:</b>
               </p>
@@ -119,7 +137,7 @@ function App() {
                   Adjustable conditions for various simulations
                 </li>
                 <li className="app__feature">
-                  Responsive UI for computer and tablet screen sizes
+                  Responsive UI for computer, tablet, and mobile screen sizes
                 </li>
               </ul>
               <div className="app__links">
@@ -158,16 +176,33 @@ function App() {
               onSwiper={(swiper) => (swiperInstance = swiper)}
               className="app__swiper"
             >
-              {wildfireImages.map((src, index) => (
-                <SwiperSlide key={index}>
-                  <img
-                    src={src}
-                    alt={`Slide ${index + 1}`}
-                    className="app__swiper__img"
-                    onClick={() => setSelectedImage(src)}
-                  />
-                </SwiperSlide>
-              ))}
+              {!window.matchMedia("(max-width: 650px)").matches ? (
+                <>
+                  {wildfireImages.map((src, index) => (
+                    <SwiperSlide key={index}>
+                      <img
+                        src={src}
+                        alt={`Slide ${index + 1}`}
+                        className="app__swiper__img"
+                        onClick={() => setSelectedImage(src)}
+                      />
+                    </SwiperSlide>
+                  ))}
+                </>
+              ) : (
+                <>
+                  {wildfireMobileImages.map((src, index) => (
+                    <SwiperSlide key={index}>
+                      <img
+                        src={src}
+                        alt={`Slide ${index + 1}`}
+                        className="app__swiper__img"
+                        onClick={() => setSelectedImage(src)}
+                      />
+                    </SwiperSlide>
+                  ))}
+                </>
+              )}
             </Swiper>
             {/* Popup Modal */}
             <div
@@ -192,7 +227,7 @@ function App() {
         </li>
         <li className="app__project">
           <div className="app__project-content">
-            <div className="app__project-header">
+            <div className="app__project-div">
               <p className="app__project-title">Card Game Project:</p>
             </div>
             <div className="app__project-group">
@@ -220,8 +255,12 @@ function App() {
                 <p className="app__feature-title">
                   <b>Features:</b>
                 </p>
-                <li className="app__feature">Mobile-responsive design for seamless play across devices</li>
-                <li className="app__feature">Secure user authentication system</li>
+                <li className="app__feature">
+                  Mobile-responsive design for seamless play across devices
+                </li>
+                <li className="app__feature">
+                  Secure user authentication system
+                </li>
                 <li className="app__feature">
                   Drag-and-drop and touch-and-drop gameplay
                 </li>
@@ -236,7 +275,7 @@ function App() {
                   </a>
                 </p>
                 <p className="app__link-paragraph">
-                  Github: 
+                  Github:
                   <a
                     className="app__project-description app__link"
                     href="https://github.com/matthew-wright9630/Card-Games-Frontend"
@@ -250,9 +289,7 @@ function App() {
                     Backend
                   </a>
                 </p>
-                <p className="app__link-paragraph">
-                  
-                </p>
+                <p className="app__link-paragraph"></p>
               </div>
             </div>
           </div>
@@ -323,7 +360,7 @@ function App() {
         </li>
         <li className="app__project">
           <div className="app__project-content">
-            <div className="app__project-header">
+            <div className="app__project-div">
               <p className="app__project-title">Around the US Project:</p>
             </div>
             <div className="app__project-group">
